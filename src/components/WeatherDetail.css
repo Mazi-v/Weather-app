@@ -1,0 +1,126 @@
+.main-container {
+    display: flex;             
+    align-items: center;       
+    justify-content: center;   
+    flex-direction: column;
+    height: 90vh;  
+    position: relative;      
+    background-color: #d6d7e5;  
+}
+.weather-container {
+    background-color:  #f5f5f5;;
+    width: 600px;     
+    box-shadow: 0 4px 8px rgba(79, 53, 74, 0.899);
+
+    max-width: 50%; 
+    padding: 10px;            
+    font-family: 'Roboto', sans-serif; 
+    background-color: #f5f5f5; 
+    border-radius: 10px;      
+}
+.dropdown-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.select-dropdown {
+    width: 100%;
+}
+
+.weather-card {
+    background-color: #f5f5f5;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(79, 53, 74, 0.899);
+    padding-left: 30px;
+    padding-top: 40px;
+    transition: transform 0.5s;
+    white-space: nowrap;
+}
+
+.weather-card:hover {
+    transform:scaleX(1.1) scaleY(1.1)
+}
+
+.weather-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+
+.weather-details {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    text-overflow: ellipsis;
+}
+
+.weather-details p {
+    margin: 5px 0;
+    
+}
+.button_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-button {
+
+    display: block;
+    width: 50%;
+    padding: 10px;
+    background-color: #a5a6e5;
+    color: rgb(49, 10, 116);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+
+}
+
+.submit-button:hover {
+    background-color: #5a3d5c;
+
+    color: rgb(247, 247, 247);
+}
+.WeatherDetail-container{
+    padding: 30px;
+}
+
+.next-days-button:focus {
+    outline: none;
+}
+.next-days-button {
+
+    display: block;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #a5a6e5;
+    color: rgb(49, 10, 116);
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-style:normal;
+}
+
+.next-days-button:hover {
+    background-color: #5a3d5c;
+
+    color: rgb(247, 247, 247);
+}

@@ -1,12 +1,19 @@
-import './App.css';
-import WeatherDetails from './components/WeatherDetails';
+import "./App.css";
+import PredictWeather from "./components/PredictWeather";
+import WeatherDetails from "./components/Weather";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navigation from "./Navigation";
 
 function App() {
   return (
-    <div className="App">
-      <WeatherDetails></WeatherDetails>
-      
-    </div>
+    <Router>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<WeatherDetails />} />
+        <Route path="/predictWeather" element={<PredictWeather />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
+    </Router>
   );
 }
 
