@@ -1,3 +1,34 @@
+## Overview
+This is a React project designed to demonstrate a simple weather prediction app.
+
+## Features
+- Displays current weather based on the user's chosen country and city.
+- Displays current weather based on the user's geolocation.
+- Allows users to see the 5-day weather forecast.
+- Interactive UI with day and time selections.
+
+API:
+- OpenWeatherMap API: This project utilizes the OpenWeatherMap API to retrieve weather data. You may need to sign up for an API key to use the features fully.
+
+## How to Run the Project
+
+### Prerequisites
+- **Node.js** (Make sure you have Node.js installed. You can download it from [here](https://nodejs.org/).)
+- **npm** (Node Package Manager, comes with Node.js)
+
+### Steps to Run:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mazi-v/Weather-app.git
+2. Navigate into the project folder:
+   cd Weather-app
+4. Install the dependencies:
+   npm install
+5. Run the development server:
+   npm start
+6. Open the app in your browser:
+   http://localhost:3000
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
