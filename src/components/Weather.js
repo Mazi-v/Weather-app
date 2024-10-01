@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import { dummy } from "../dummydata.js";
+// import { dummy } from "../dummydata.js";
 import { countriesList, cities_list } from "../data/countries.js";
 import "./WeatherDetail.css";
 import { convert } from "./util/convert.js";
 import WeatherDetail from "./WeatherDetail.js";
 import { Link } from "react-router-dom";
+import UserLocationWeather from "./UserLocationWeather.js";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API_URL = process.env.REACT_APP_API_URL;
 
 export default function WeatherDetails() {
   const [weather, setWeather] = useState(null);
-  // const [weather, setWeather] = useState(dummy);
   const [city, setCity] = useState();
   const [country, setCountry] = useState();
 
@@ -24,8 +24,6 @@ export default function WeatherDetails() {
         const data = await response.json();
         if (data && data.main) {
           setWeather(data);
-          // console.log("weather", weather);
-          // console.log("Weather data:", data.current);
         } else {
           console.error("Weather data not found");
         }
@@ -41,9 +39,18 @@ export default function WeatherDetails() {
   const chooseCity = (e) => {
     setCity(e.value);
   };
+  const handleUserLocationData = (data, city, country) => {
+    setWeather(data);
+    setCountry(country);
+    setCity(city);
+  };
 
   return (
     <div className="main-container">
+      <UserLocationWeather
+        handleUserLocationData={handleUserLocationData}
+      ></UserLocationWeather>
+
       <div className="weather-container">
         <div className="dropdown-container">
           <Select
